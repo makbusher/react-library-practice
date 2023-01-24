@@ -12,7 +12,7 @@ const options = {
   series: [{
     data: [1, 2, 5]
   }]
-}
+};
 
 export function Content() {
   return (
