@@ -1,8 +1,9 @@
 import { AwesomeButton } from 'react-awesome-button';
 import 'react-awesome-button/dist/styles.css';
-import React from 'react';
 import Highcharts from 'highcharts';
 import HighchartsReact from 'highcharts-react-official';
+import React, { useState } from 'react';
+import Calendar from 'react-calendar';
 
 
 const options = {
@@ -15,9 +16,12 @@ const options = {
 };
 
 export function Content() {
+  const [value, onChange] = useState(new Date());
+
   return (
     <div>
       <h1>Welcome to React!</h1>
+      <Calendar onChange={onChange} value={value} />
       <HighchartsReact
         highcharts={Highcharts}
         options={options}
