@@ -1,9 +1,11 @@
+import Headroom from "react-headroom";
+
 export function Header() {
   return (
-    <header>
+    <Headroom>
       <nav>
         <a href="#">Home</a> | <a href="#">Link</a>
       </nav>
-    </header>
+    </Headroom>
   );
 }
